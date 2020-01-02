@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115617917-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-115617917-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9785620519622449",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Conversor de divisas en criptomonedas">
+    <meta name="keywords" content="Bitcoin, Ethereum, Conversor, Divisas, Euro">
+    <meta name="author" content="jacovinus@gmail.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CoinManager | Cotizador de monedas en español</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+</head>
+<body>
+    <div class="center grey lighten-3 title">
+        <img src="img/coinmanager_logo.jpg"/>
+ 
+    </div>
+    <div class="container contenido-principal">
+        <!-- Page Content goes here -->
+        <div class="row">
+            <form class="col s8 offset-s2" id="formulario">
+                <div class="row">
+                    <div class="formulario-cotizar">
+                        <div class="input-field col s12">
+                                <select id="moneda">
+                                    <option value="" disabled selected>Elige tu Moneda </option>
+                                    <option value="USD">Dolar Estadounidense</option>
+                                    <option value="EUR">Euros</option>
+                                    <option value="GBP">Libras</option>
+                                    <option value="CHF">Franco Suizo</option>
+                                    <option value="SEK">Corona Sueca</option>
+                                    <option value="IDR">Rupia Indonesia</option>
+                                    <option value="RUB">Rublo</option>
+                                    <option value="CNY">Yuan Chino</option>
+                                    <option value="JPY">Yen Japonés</option>
+                                </select>
+                                <label>Moneda</label>
+                        </div>    
+                        <div class="input-field col s12">
+                            <select id="criptomoneda">
+                                <option value="" disabled selected>Elige Criptomoneda</option>
+                            </select>
+                            <label>Criptomoneda</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <button class="btn waves-effect waves-light orange darken-3" type="submit" name="action">Cotizar
+                                <i class="material-icons right">attach_money</i>
+                            </button>
+                        </div>
+                        <div class="mensajes col s12"></div>
+                        <div class="spinner"></div>
+                        <div id="resultado" class="col s12 grey darken-4"></div>
+                    </div><!--.formulario-cotizar-->
+                  
+                </div>
+            </form>
+        </div>
+        <footer class="page-footer orange darken-4">
+            <div class="footer-copyright">
+                <div class="container center">
+                    Copyright CoinManager.eu 20018
+                </div>
+            </div>
+        </footer>
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+    <script src="js/cotizador.js"></script>
+    <script src="js/interfaz.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+            (function() {
+                $(document).ready(function(){
+                    setTimeout(() => {
+                        $('select').select();
+                    }, 2000);
+                    
+                });
+            })(jQuery);
+        </script>
+        <style>
+
+  
+body {
+    background:#f5f5f5;
+}
+ .title {
+     padding-bottom:1em;
+     border-bottom: 4px solid lightgray;
+ }
+
+  form {
+      padding:2em;
+      margin: 2em auto;
+  } 
+
+  .contenido-principal {
+   border-top:.5em solid lightgrey;
+      margin: 50px auto;
+      background:white;
+    /*  background-color: white;
+      -webkit-box-shadow: -1px 20px 52px -13px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -1px 20px 52px -13px rgba(0, 0, 0, 0.75);
+      box-shadow: -1px 20px 52px -13px rgba(0, 0, 0, 0.75); */
+  }
+
+  .mensajes {
+      color: white;
+  }
+
+  #resultado {
+      text-align: center;
+  }
+
+  .btn {
+      width: 100%;
+  }
+
+  .spinner {
+      text-align: center;
+  }
+        </style>
+
+</body>
+</html>
